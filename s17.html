@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="first"></h1>
+    <script>
+        // 화면에 키보드를 입력하면 h1에 입력한 key가 들어가도록 해보기
+        // document.body.addEventListener("keyup", (event) => {
+        //     const first = document.querySelector("#first");
+        //     first.innerHTML = first.innerHTML + event.key;
+        // });
+
+        // 단축키 만들기
+        document.body.addEventListener("keyup", (event) => {
+            // ctrl + w 를 사용하면 alert("ctrl+1") 창 출력
+            if(event.key === 'i' && event.ctrlKey){
+                alert("ctrl+i");
+            }
+            // console.log(event);
+        })
+        
+    </script>
+</body>
+</html>

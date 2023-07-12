@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="first">내용</h1>
+    <script>
+        // 스타일 변경
+        const firstTag = document.querySelector("#first");
+        // 이렇게 사용하는건 비추천한다
+        // css를 id나 class 등으로 컨트롤할 수 없을 경우에만 사용
+        // firstTag.style.color = "red";
+
+        // 클래스를 추가 및 삭제해서 스타일 변경
+        
+        firstTag.onclick = () =>{
+            if(firstTag.classList.contains("red")){
+                firstTag.classList.remove("red");
+            } else{
+                firstTag.classList.add("red");
+            }
+        }
+
+
+    </script>
+</body>
+</html>
